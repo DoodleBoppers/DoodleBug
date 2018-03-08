@@ -1,9 +1,9 @@
 package doodle;
 
 public class Bug {
-	int bugType; //0 = Empty, 1 = Ant, 2 = Doodle
-	int stepCtr = 0;
-	boolean hasEaten = false;
+	private int bugType; //0 = Empty, 1 = Ant, 2 = Doodle
+	private int stepCtr = 0;
+	private boolean hasEaten = false;
 	
 	Bug(int b) {
 		if((b > -1) & (b < 3)) {
@@ -30,6 +30,8 @@ public class Bug {
 		}
 	}
 	public void setHE(boolean e) {hasEaten = e;}
+	public void clearStep() {stepCtr = 0;}
+	public void incStep() {stepCtr++;}
 	
 	public void kill() {
 		bugType = 0;
